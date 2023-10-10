@@ -1,0 +1,50 @@
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #222;">
+    <a class="navbar-brand text-white hsize" href="#">DASHBOARD</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <a href="logout" class="btn btn-outline-light btn-md btn-lg" role="button">LOGOUT</a>
+      </ul>
+</div>
+</nav>
+<div class="container mx-auto">
+    <div class="d-flex justify-content-between p-1">
+        <h1>Welcome</h1>
+        <%- include ("../partials/messages") %>
+    </div>
+    <div class="btable">
+        <a href="addfiles" class="btn btn-outline-dark" role="button"><i class="fas fa-plus-circle"></i> Add Files</a>
+    </div>
+    <table width="100%">
+        <thead>
+            <tr>
+                <th width="1">TITLE</th>
+                <th width="400">CREATED AT</th>
+                <th width="120">EDIT FILES</th>
+                <th width="100">DELETE FILES</th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td><a href="/files/<% files._id %>"></a><%= files.title %></td>
+            <td><%= formatDate(files.createdAt, 'MMMM Do YYYY, h:mm:ss a') %></td>
+            <td>
+                <a href="/files/edit/<% files._id %>" class="btn btn-outline-dark btn-float">
+                    <i class="fas fa-edit"></i>
+                </a>
+            </td>
+            <td>
+                <form action="/files/<% files._id %>" method="POST" id="delete-form">
+                    <input type="hidden" name="_method" value="DELETE">
+                    <button type="submit" class="btn btn-outline-dark">
+                        <i class="fas fa-trash "></i>
+                    </button>
+                </form>
+            </td>
+        </tr>
+        </tbody>
+</table>    
+</div>

@@ -1,0 +1,30 @@
+<div class="container" id="container">
+    <div class="form-container sign-up-container">
+        <form action="/auth/register" method="POST">
+            <%- include ("./partials/messages") %>
+            <h1 class="heads">Create Account</h1>
+            <input type="text" placeholder="Name" name="name" required value="<%= typeof name != 'undefined' ? name : '' %>" />
+            <input type="email" placeholder="Email" name="email" required value="<%= typeof email != 'undefined' ? email : '' %>" />
+            <input type="password" placeholder="Password" name="password" required value="" id="myRegPassword" />
+            <span class="reg-eye-1 position-absolute" onclick="myPassFunction()">
+                <i id="reg1hide1" class="fas fa-eye fa-lg"></i>
+                <i id="reg1hide2" class="fas fa-eye-slash fa-lg"></i>
+            </span>
+            <input type="password" placeholder="Confirm Password" name="confirmpassword" required value="" id="myRegCPassword" />
+            <span class="reg-eye-2 position-absolute" onclick="myCPassFunction()">
+                <i id="reg2hide1" class="fas fa-eye fa-lg"></i>
+                <i id="reg2hide2" class="fas fa-eye-slash fa-lg"></i>
+            </span>
+            <button value="Signup" class="mt-2">Sign Up</button>
+        </form>
+    </div>
+    <div class="index-container">
+        <div class="overlay">
+            <div class="overlay-panel overlay-left">
+                <h1>Welcome Back!</h1>
+                <p>Already have an acoount! Click Sign In to enter into your account</p>
+                <a class="ghost button" id="signIn" href="/auth/login">Sign In</a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+<div class="container" id="container">
+    <div class="form-container sign-in-container">
+      <form action="/auth/login" class="position-relative" method="POST">
+        <%- include ("./partials/messages") %>
+        <h1 class="heads">Sign In</h1>
+        <input type="email" placeholder="Email" name="email" required/>
+        <input type="password" placeholder="Password" name="password" id="myLoginPassword" required/>
+        <span class="log-eye position-absolute" onclick="myLoginFunction()">
+          <i id="loghide1" class="fas fa-eye fa-lg"></i>
+          <i id="loghide2" class="fas fa-eye-slash fa-lg"></i>
+        </span>
+        <a href="/auth/forgot">Forgot your password?</a>  
+        <button type="submit">Sign In</button>
+      </form>
+    </div>
+    <div class="login-container">
+      <div class="overlay">
+        <div class="overlay-panel overlay-right">
+          <h1>Hello Friend!</h1>
+            <p>Don't have an account? Sign Up to create new account</p>
+              <a class="ghost button" id="signUp" href="/auth/register">Sign Up</a>
+        </div>
+      </div>
+    </div>
+</div>

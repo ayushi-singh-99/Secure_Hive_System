@@ -1,0 +1,267 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,800");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: -20px 0 50px;
+  overflow: hidden;
+}
+
+h1 {
+  font-weight: bold;
+  margin: 0;
+  font-size: 30px;
+}
+
+p {
+  font-size: 14px;
+  font-weight: 100;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  margin: 20px 0 30px;
+}
+
+span {
+  font-size: 12px;
+}
+
+a {
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+  margin: 15px 0;
+}
+
+a:hover {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.container {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  position: relative;
+  overflow: hidden;
+  width: 768px;
+  max-width: 100%;
+  min-height: 480px;
+}
+
+.form-container form {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 0 50px;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.form-container a {
+    color: #333;
+}
+
+.form-container input {
+  background: #eee;
+  border: none;
+  padding: 10px 15px;
+  margin: 8px 0;
+  width: 100%;
+}
+
+button {
+  border-radius: 20px;
+  border: 1px solid #642B73;
+  background: transparent;
+  color: #642B73;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px 45px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: transform 80ms ease-in;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #642B73;
+  color: #fff;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+button:focus {
+  outline: none;
+}
+
+button.ghost {
+  background: transparent;
+  border-color: #fff;
+}
+
+.alert {
+  font-size: 10px;
+}
+
+.close:hover {
+  background: transparent;
+  color: #000;
+}
+
+a.button {
+  border-radius: 20px;
+  border: 1px solid #642B73;
+  background: #642B73;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px 45px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: transform 80ms ease-in;
+}
+
+a:active {
+  transform: scale(0.95);
+}
+
+a:focus {
+  outline: none;
+}
+
+a.ghost {
+  background: transparent;
+  border-color: #fff;
+}
+
+a.ghost:hover {
+  background: #fff;
+  color: #C6426E;
+  text-decoration: none;
+}
+
+
+.form-container {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  transition: all 0.6s ease-in-out;
+}
+
+.sign-in-container {
+  left: 0;
+  width: 50%;
+  z-index: 1;
+}
+
+.heads {
+  padding-bottom: 25px;
+}
+
+.sign-up-container {
+  right: 0;
+  width: 50%;
+  z-index: 2;
+}
+
+.login-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  transition: transform 0.6 ease-in-out;
+  z-index: 100;
+}
+
+.index-container {
+    position: absolute;
+    top: 0;
+    right: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: transform 0.6 ease-in-out;
+    z-index: 100;
+  }
+
+.overlay {
+  background: #642B73;
+  background: linear-gradient(to right, #642B73, #C6426E) no-repeat 0 0 / cover;
+  color: #fff;
+  position: relative;
+  left: -100%;
+  height: 100%;
+  width: 200%;
+  transform: translateX(0);
+  transition: transform 0.6 ease-in-out;
+}
+
+.overlay .a {
+    color: #fff;
+}
+
+.overlay-panel {
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 40px;
+  height: 100%;
+  width: 50%;
+  text-align: center;
+  transform: translateX(0);
+  transition: transform 0.6 ease-in-out;
+}
+
+.overlay-right {
+  right: 0;
+  transform: translateX(0);
+}
+
+.overlay-left {
+    right: 0;
+    transform: translateX(0);
+}
+
+.field-hint {
+  font-size: xx-small;
+}
+
+.log-eye, .reg-eye-1, .reg-eye-2 {
+  margin-left: 20em;
+  cursor: pointer;
+}
+
+.log-eye i {
+  margin-top: 2em;
+  margin-right: 0.2em;
+}
+
+.reg-eye-1 {
+  margin-top: 6em;
+}
+
+.reg-eye-2 {
+  margin-top: 16em;
+}
+
+#loghide1, #reg1hide1, #reg2hide1 {
+  display: none;
+}

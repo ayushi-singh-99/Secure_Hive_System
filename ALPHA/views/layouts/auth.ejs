@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/css/style.css">
+    <title><%- title %></title>
+</head>
+<body>
+    <%- body %>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script>
+        function myLoginFunction() {
+            
+            var x = document.getElementById('myLoginPassword');
+            var y = document.getElementById('loghide1');
+            var z = document.getElementById('loghide2');
+
+            if(x.type === 'password')  {
+                x.type = "text";
+                y.style.display = "block";
+                z.style.display = "none";
+            } else {
+                x.type = "password";
+                y.style.display = "none";
+                z.style.display = "block";
+            }
+        }
+        function myPassFunction() {
+
+            var x = document.getElementById('myRegPassword');
+            var y = document.getElementById('reg1hide1');
+            var z = document.getElementById('reg1hide2');
+
+            if(x.type === 'password')  {
+                x.type = "text";
+                y.style.display = "block";
+                z.style.display = "none";
+            } else {
+                x.type = "password";
+                y.style.display = "none";
+                z.style.display = "block";
+            }
+        }
+        function myCPassFunction() {
+
+            var x = document.getElementById('myRegCPassword');
+            var y = document.getElementById('reg2hide1');
+            var z = document.getElementById('reg2hide2');
+
+            if(x.type === 'password')  {
+                x.type = "text";
+                y.style.display = "block";
+                z.style.display = "none";
+            } else {
+                x.type = "password";
+                y.style.display = "none";
+                z.style.display = "block";
+            }
+        }
+        
+    </script>
+</body>
+</html>

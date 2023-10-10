@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #222;">
+    <a class="navbar-brand text-white hsize" href="#">ADD FILES</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>      
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto mx-auto">
+          <li class="nav-item">
+            <a href="/dashboard" class="btn btn-outline-light btn-md m-1 btn-lg" role="button">DASHBOARD</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav">
+          <a href="logout" class="btn btn-outline-light btn-md btn-lg" role="button">LOGOUT</a>
+        </ul>
+      </div>
+</nav>
+<div class="container mx-auto">
+    <form action="/files" method="POST">
+      <div class="form">
+        <p>
+          <label for="title"> Title <span>*</span> </label>
+          <input name="title" id="title" type="text" class="field size" />
+        </p>
+        <p>
+          <label for="body">Body <span>*</span> </label>
+          <textarea name="body" id="body" class="field size" rows="10" cols="30"></textarea>
+        </p>
+        <input type="submit" value="Save" class="btn btn-outline-dark btn-lg">
+        <a href="/dashboard" class="btn btn-outline-dark btn-lg p-2">Cancel</a>
+      </div>
+    </form>
+</div>

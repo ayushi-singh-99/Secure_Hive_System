@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="row mt-3 pt-3">
+        <div class="col-md-10 m-auto text-center main">
+            <%- include ("./partials/messages") %>
+            <i class="fas fa-key fa-5x"></i>
+            <h1>Forgot Password</h1>
+            <form action="/auth/forgot" class="mx-auto" method="POST">
+                <div class="form-group mt-5">
+                    <input type="email" id="email" name="email" class="form-control" placeholder="Enter Email" />
+                </div>
+                <button type="submit" class="mt-2">Send me a password reset link</button>
+            </form>
+            <p class="mt-4">
+                Remember your password? <a href="/auth/login">Login</a>
+            </p>
+        </div>
+    </div>
+</div>

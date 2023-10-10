@@ -1,0 +1,56 @@
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #222;">
+    <a class="navbar-brand text-white hsize" href="#">ADMIN DASHBOARD</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto mx-auto">
+        <li class="nav-item">
+            <a href="/dashboard" class="btn btn-outline-light btn-md m-1 btn-lg" role="button">FAKE DASHBOARD</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto">
+        <a href="/auth/logout" class="btn btn-outline-light btn-md btn-lg" role="button">LOGOUT</a>
+      </ul>
+    </div>
+  </nav>
+  <div class="container mx-auto">
+    <div class="d-flex justify-content-between p-1">
+      <h1>Welcome Admin</h1>
+      <%- include ("../partials/messages") %>
+    </div>
+<% if(users != '') { %>
+    <table width="100%" class="m-1">
+        <thead>
+          <tr>
+            <th width="50">USERS</th>
+            <th width="120">EMAIL</th>
+            <th width="150">CREATED AT</th>
+            <th width="120">DELETE USERS</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% users.forEach(function(users) { %>
+            <% if(users.role != ROLE.ADMIN) { %>
+          <tr>
+            <td><%= users.name %></td>
+            <td><%= users.email %></td>
+            <td><%= formatDate(users.createdAt, 'MMMM Do YYYY, h:mm:ss a') %></td>
+            <td>
+              <form action="/admin/admindash/<%- users._id %>" method="POST" id="delete-form">
+                <input type="hidden" name="_method" value="DELETE">
+                  <button type="submit" class="btn btn-outline-dark">
+                    <i class="fas fa-trash "></i>
+                  </button>
+              </form>
+            </td>
+          </tr>
+            <% } %>
+          <% }); %>
+      </tbody>
+    </table>
+</div>
+<% } else { %>
+  <p class="m-2">No Users Found</p>
+<% } %>
